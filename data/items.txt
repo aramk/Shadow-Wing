@@ -1,0 +1,43 @@
+Item Data File
+==============
+
+This text file contains tabular data about each item in the game. You may
+use this data in any way you wish in the source code of your program. It is
+provided so that you don't have to work out the exact attributes and
+placements of each item.
+
+There are two sections. The "general item data" section contains a table with
+a row for each item *type*. The "specific item data" section contains a table
+with a row for each actual item instance. For example, there are several
+Repair power-ups in the game -- the general table has one row for "Repair".
+The specific table has a row for each Repair power-up featured in the game.
+
+General item data
+=================
+
+Note that the image file for each item is in the "assets/items" directory.
+
+Item type       Image file          Effect
+--------------------------------------------------------------
+Repair          repair.png          Shield = Full-Shield
+Shield          shield.png          Shield and Full-Shield +40
+Firepower       firepower.png       Firepower +1
+
+Specific item data
+==================
+
+This table shows the position of each item in the game.
+
+Item type       Position (x, y) in pixels
+-----------------------------------------
+
+Shield          468, 10980
+Repair          468, 10476
+Firepower       324, 9900
+Firepower       549, 6791
+Repair          324, 6660
+Firepower       396, 4860
+Repair          252, 3348
+Shield          756, 2916
+Shield          684, 1548
+Repair          432, 900

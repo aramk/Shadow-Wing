@@ -1,0 +1,101 @@
+Unit Data File
+==============
+
+This text file contains tabular data about each unit and missile in the game.
+You may use this data in any way you wish in the source code of your program.
+It is provided so that you don't have to work out the exact attributes and
+placements of each unit.
+
+There are two sections. The "general unit data" section contains a table with
+a row for each unit *type*. The "specific unit data" section contains a table
+with a row for each actual unit instance. For example, there are many Drones
+in the game -- the general table has one row for "Drone". The specific table
+has a row for each Drone featured in the game.
+
+General unit data
+=================
+
+Note that the image file for each unit is in the "assets/units" directory.
+
+Unit type       Image file          Kind        Shield  Damage  Firepower
+-------------------------------------------------------------------------
+Player*         player.png          Player      100     10      0
+
+Fighter         fighter.png         Enemy       24      9       0
+Drone           drone.png           Enemy       16      8       -
+Asteroid        asteroid.png        Enemy       24      12      -
+Boss            boss.png            Enemy       240     100     3
+
+Missile (blue)  missile-player.png  Missile     1       8       -
+Missile (red)   missile-enemy.png   Missile     1       8       -
+
+* The player's attributes may be affected by items. These are the starting
+  attributes.
+
+Specific unit data
+==================
+
+This table shows the starting position of each unit in the game.
+
+Unit type       Start position (x, y) in pixels
+-----------------------------------------------
+Player          432, 13716
+
+Fighter         432, 12708
+Fighter         252, 12420
+Fighter         396, 12420
+Fighter         324, 11916
+Drone           684, 11916
+Drone           180, 11700
+Fighter         540, 11124
+Drone           540, 10404
+Drone           324, 9900
+Asteroid        612, 9684
+Fighter         324, 9396
+Fighter         468, 9342
+Fighter         612, 9252
+Fighter         612, 9036
+Fighter         468, 8964
+Fighter         324, 8892
+Fighter         540, 8460
+Fighter         684, 8460
+Drone           180, 8244
+Drone           756, 7812
+Drone           36,  7740
+Asteroid        252, 7308
+Asteroid        684, 7236
+Asteroid        396, 7164
+Asteroid        180, 7084
+Drone           108, 7050
+Drone           756, 7050
+Asteroid        327, 6940
+Asteroid        72,  6875
+Asteroid        428, 6842
+Asteroid        380, 6720
+Asteroid        612, 6684
+Asteroid        538, 6620
+Asteroid        810, 6592
+Drone           108, 6590
+Drone           756, 6590
+Asteroid        480, 6520
+Asteroid        270, 6382
+Asteroid        520, 6201
+Asteroid        370, 6031
+Asteroid        430, 5928
+Asteroid        612, 5868
+Drone           252, 5292
+Drone           828, 3780
+Fighter         540, 3708
+Fighter         612, 3564
+Fighter         684, 3420
+Drone           828, 3420
+Fighter         612, 3204
+Fighter         540, 3060
+Drone           828, 3060
+Fighter         324, 2052
+Fighter         612, 1980
+Asteroid        36,  1764
+Asteroid        792, 1548
+Drone           108, 1260
+Drone           756, 1260
+Boss            432, 144
