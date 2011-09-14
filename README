@@ -1,0 +1,74 @@
+     _______. __    __       ___       _______   ______   ____    __    ____ 
+    /       ||  |  |  |     /   \     |       \ /  __  \  \   \  /  \  /   / 
+   |   (----`|  |__|  |    /  ^  \    |  .--.  |  |  |  |  \   \/    \/   /  
+    \   \    |   __   |   /  /_\  \   |  |  |  |  |  |  |   \            /   
+.----)   |   |  |  |  |  /  _____  \  |  '--'  |  `--'  |    \    /\    /    
+|_______/    |__|  |__| /__/     \__\ |_______/ \______/      \__/  \__/     
+
+____    __    ____  __  .__   __.   _______ 
+\   \  /  \  /   / |  | |  \ |  |  /  _____|
+ \   \/    \/   /  |  | |   \|  | |  |  __  
+  \            /   |  | |  . `  | |  | |_ | 
+   \    /\    /    |  | |  |\   | |  |__| | 
+    \__/  \__/     |__| |__| \__|  \______| 
+                                            
+Aram Kocharyan
+
+I authorise the University of Melbourne to demonstrate this work publicly and distribute this work in binary form.
+
+Here are my extensions:
+- A full-fledged velocity system with acceleration, deceleration and everything in between for all objects. I have used
+  mathematical functions for creating the easing in and out effect of acceleration. You give it the time you have been
+  accelerating, and it will return the velocity.
+- Missiles are pushed by your inertia if you shoot while moving, causing them to travel in your direction as they
+  decelerate.
+- All resources are loaded as deferred resources, so that we can show a pretty loading bar rather than a dead screen
+  There is no duplicate replication of resources in any classes, everything is loaded at initiation and referenced
+  by subsequent classes.
+- A Menu class controls the different states of the game - paused, game over, or the game menu
+  It also allows for full-screen and disabling sounds
+- Game music is looping and objects have sound effects, which have slightly random pitches.
+- I have a scoring system that gives points to the player when they collide/shoot to destroy objects. Different objects
+  have different scores.
+- The map can be traveled horizontally as well as vertically, so you can explore the whole width of the map now.
+  As the player moves left and right, the camera shifts, revealing that side of the map.
+- Any GameObject can have movement animations attached to it, like the player and fighter that have boosters and strafing animations.
+- A new unit called a turret can shoot in any direction around it, but can not move. The direction and position of missiles is determined
+  using the Unit Circle, so this eliminates the need to use a set 50px rule.
+- If a player is being pushed off the map by a block, they can still try and escape by moving out of the way and accelerating
+  upwards, as long as they can travel faster than the camera is causing the block to push down on them.
+- Asteroids generate with a random rotation and direction, and rotate as they move.
+- The boss has a health bar. I have instantiated from the same PanelBar class the player uses.
+- If you're in DEBUG mode, pressing C can pause the camera, pressing G will enable no-clip.
+- A pause and gameover screen for the game. A fullscreen mode. Frame rates are Vsynced and limited to reduce horrifying CPU overkill.
+  Pauses the game when the screen loses focus.
+- I have animations for objects in GameGraphic, and they can add as many animations to themselves as they like.
+- I have changed the images for all objects.
+- The stars in space move slower than the tiles on the map.
+- When units are destroyed, they explode.
+- I have added a Number class that draws any number you give it (using images, not font) anywhere on the screen
+- I parse objects, the player, and checkpoints from a text file and add it to the world
+- PanelBars can be extended and attached to any object, and monitor any property.
+  They change colour, and colour schemes can be changed as well.
+- The player has movement animations, so that it appears as if they are really turning.
+- I have defined the space and left/right control keys to shoot for convenience.
+
+SOURCES:
+- The Units are from Tyrian's free collection, the best darn shoot 'em up ever:
+  http://www.lostgarden.com/2007/04/free-game-graphics-tyrian-ships-and.html
+  I had to remaster every object though, bigger screens these days. Also, the boss is made entirely of spare parts.
+- The tiles are from:
+  Tony Hayes - http://www.sharecg.com/v/38543/Texture/27-Sci-Fi-Metal-Textures?interstitial_displayed=Yes
+  Kimber - http://www.sharecg.com/v/14693/Texture/Jeweled-Metal-Tiles?interstitial_displayed=Yes
+- The explosion, it's all over the net:
+  http://www.instructables.com/file/FYTIALRFEMY342N/
+- Fonts:
+  Pixelation by Digital Flame Studios - http://www.dafont.com/pixelation.font
+  Space Marine by Joiro Hatgaya - http://www.dafont.com/space-marine.font
+- The in-game music is from: Golden Wings by Bag Raiders, Album Bag Raiders
+  Since this not authorised for commercial use, you can remove it from the game folder if required and the game will
+  simply play without music.
+- Sounds:
+  Laser gun by Infobandit - http://www.freesound.org/usersViewSingle.php?id=98464
+  Explosion from Alien Shooter Vengeance
+- Everything else is mine.
